@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Theo Johnson</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;  /* The height is 400 pixels */
+      width: 50%;  /* The width is the width of the web page */
+     }
+
+     td {
+       padding-top: 10px;
+     }
+    </style>
+  </head>
+
+  <body background="bluegradient.png";>
+    <header>
+      <div class="headerlogo">
+        <img src="header10.jpg" style="float:left;width:100%;height:150px;" alt="logo">
+        <h1 style="position:absolute;left:5%;font-size:50px;">Theo Johnson</h1>
+      <h3 style="position:absolute;left:5%;bottom: 79%;">HCI Graduate Student / User Experience Researcher | <a href="mailto:tjohnso9@oswego.edu">Email: tjohnso9@oswego.edu</a>
+          </h3>
+      <ul class= "navigation">
+        <a href="AboutMe.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">About Me</li>
+        </a>
+        <a href="Bowling.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Bowling</li>
+        </a>
+        <a href="UXProjects.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">UX Projects</li>
+        </a>
+        <a href="Publications.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Publications</li>
+        </a>
+        <a href="Contact.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Contact</li>
+        </a>
+        <a href="Ireland2018.html">
+          <li style="display:inline-block;font-size:20px;font-weight:bolder;">Ireland 2018</li>
+            </a>
+        </ul>
+      </div>
+
+   </header>
+
+   <h3>University of Galway Ireland</h3>
+   <!--The div element for the map -->
+   <div id="map"></div>
+   <script>
+// Initialize and add the map
+function initMap() {
+ // The location of Ireland
+ var ireland = {lat: 53.277345, lng:  -9.061496};
+ // The map, centered at Uluru
+ var map = new google.maps.Map(
+     document.getElementById('map'), {zoom: 4, center: ireland});
+ // The marker, positioned at Uluru
+ var marker = new google.maps.Marker({position: ireland, map: map});
+}
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyXTu4ySO82l4p8E19qyldgRitDHLzuA&callback=initMap">
+   </script>
+
+
+    <div class="table" style="position:absolute;left:52%;top:25%;width:400px;">
+
+<h3>Video Game User Experience: To Vr, or Not to VR?</h3>
+<br>
+     <table>
+  <tr>
+    <th>Virtual reality (VR) has become a popular additive to entertainment purposes. The current study investigated whether VR gaming might affect
+        the video gaming user experience (UX). In this study, we compared three different gaming platforms, namely desktop computer, Oculus Rift, and
+        HTC Vive, in terms of gaming UX satisfaction. After the study was completed, it was noted that VR gaming may not be a better alternative than
+        traditional gaming.
+  </tr>
+  <tr>
+    <td style="text-align:center;">You can find the paper at: <a href="https://ieeexplore.ieee.org/document/8516542">https://ieeexplore.ieee.org/document/8516542</a></td>
+  </tr>
+</table>
+</div>
+
+  </body>
+</html>

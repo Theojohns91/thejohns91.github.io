@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Theo Johnson</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+    @charset "UTF-8";
+}
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      height: auto;
+      line-height: 1;
+      overflow-x: hidden;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    .video {
+      position: relative;
+      padding-top: 4.1%;
+      padding-bottom: 51.95%;
+      height: 0;
+    }
+    .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      min-height: 0;
+    }
+
+    .video-gallery {
+      margin-top: 3em;
+      position: relative;
+      width: 100%;
+    }
+    .video-gallery .video {
+      animation: 1200ms fadeOut ease;
+      animation-fill-mode: both;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-row-end: 7;
+      max-height: 19.5em;
+      opacity: 0;
+      transition: all 300ms ease;
+    }
+    .video-gallery input[type="radio"] {
+      font-size: 0;
+      height: 0;
+      opacity: 0;
+      padding: 0;
+      position: fixed;
+      width: 0;
+    }
+    .video-gallery input {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .video-gallery label {
+      color: #000000;
+      font-size: 1.25em;
+      font-weight: 400;
+      grid-column-start: 2;
+      margin: 0 !important;
+      padding: 1rem 0 1rem 3rem;
+      position: relative;
+      border-bottom: 1px solid #CCCCCC;
+    }
+    .video-gallery label:last-of-type {
+      border: 0 none;
+    }
+    .video-gallery input[type="radio"]:checked + label {
+      color: #E41F35 !important;
+    }
+    .video-gallery input[type="radio"]:checked + label:before {
+      content: "▶";
+      left: 0;
+      top: 12px;
+      position: absolute;
+    }
+
+    .grid-row {
+      display: block;
+      height: 56vw;
+      max-height: 19.5em;
+      position: relative;
+    }
+    .grid-row label {
+      left: calc(50% + 16px);
+      position: relative;
+      width: calc(50% - 16px);
+    }
+    .grid-row .video {
+      padding: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+    .grid-row:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    #video-1:checked ~ .video-1, #video-2:checked ~ .video-2, #video-3:checked ~ .video-3, #video-4:checked ~ .video-4, #video-5:checked ~ .video-5, #video-6:checked ~ .video-6 {
+      animation: 1200ms fadeIn ease;
+      animation-fill-mode: both;
+      opacity: 1;
+      width: 50%;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        display: block;
+        height: 56vw;
+        opacity: 1;
+        width: 50%;
+      }
+      25% {
+        display: block;
+        height: 56vw;
+        opacity: 1;
+        width: 50%;
+      }
+      49% {
+        display: block;
+        height: 56vw;
+        opacity: 0;
+        width: 50%;
+      }
+      50% {
+        display: none;
+        height: 0;
+        opacity: 0;
+        width: 0;
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        width: 0;
+      }
+      49% {
+        display: none;
+        height: 0;
+        opacity: 0;
+        width: 0;
+      }
+      50% {
+        display: block;
+        height: 56vw;
+        opacity: 0;
+        width: 50%;
+      }
+      100% {
+        display: block;
+        height: 56vw;
+        opacity: 1;
+        width: 50%;
+      }
+    }
+    @supports(display: grid) {
+      .grid-row {
+        align-items: start;
+        display: grid;
+        grid-column-gap: 16px;
+        grid-row-gap: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+      }
+      .grid-row label {
+        left: auto;
+        width: 100%;
+      }
+      .grid-row .video {
+        position: relative;
+        width: 100%;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+          width: 100%;
+        }
+        25% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+          width: 100%;
+        }
+        49% {
+          display: block;
+          height: 56vw;
+          opacity: 0;
+          width: 100%;
+        }
+        50% {
+          display: none;
+          height: 0;
+          opacity: 0;
+          width: 0;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          width: 0;
+        }
+        49% {
+          display: none;
+          height: 0;
+          opacity: 0;
+          width: 0;
+        }
+        50% {
+          display: block;
+          height: 56vw;
+          opacity: 0;
+          width: 100%;
+        }
+        100% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .video-gallery {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+      }
+      .video-gallery label {
+        left: auto;
+        order: 2;
+        width: 100%;
+      }
+      .video-gallery .video {
+        order: 1;
+        padding-top: 4.1%;
+        padding-bottom: 51.95%;
+        position: relative;
+        top: auto;
+        width: 100%;
+      }
+
+      #video-1:checked ~ .video-1, #video-2:checked ~ .video-2, #video-3:checked ~ .video-3, #video-4:checked ~ .video-4, #video-5:checked ~ .video-5,
+      #video-6:checked ~ .video-6 #video-7:checked ~ .video-7, #video-8:checked ~ .video-8, #video-9:checked ~ .video-9,
+      #video-10:checked ~ .video-10, #video-11:checked ~ .video-11, #video-12:checked ~ .video-12, #video-13:checked ~ .video-13,
+      #video-14:checked ~ .video-14, #video-15:checked ~ .video-15, #video-16:checked ~ .video-16, #video-17:checked ~ .video-17,
+      #video-18:checked ~ .video-18
+      {
+        width: 100%;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+        }
+        25% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+        }
+        49% {
+          display: block;
+          height: 56vw;
+          opacity: 0;
+        }
+        50% {
+          display: none;
+          height: 0;
+          opacity: 0;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        49% {
+          display: none;
+          height: 0;
+          opacity: 0;
+        }
+        50% {
+          display: block;
+          height: 56vw;
+          opacity: 0;
+        }
+        100% {
+          display: block;
+          height: 56vw;
+          opacity: 1;
+        }
+      }
+    }
+
+
+
+    </style>
+  </head>
+
+  <body background="bluegradient.png";>
+    <header>
+      <div class="headerlogo">
+        <img src="header10.jpg" style="float:left;width:100%;height:150px;" alt="logo">
+        <h1 style="position:absolute;left:5%;font-size:50px;">Theo Johnson</h1>
+      <h3 style="position:absolute;left:5%;bottom: 79%;">HCI Graduate Student / User Experience Researcher | <a href="mailto:tjohnso9@oswego.edu">Email: tjohnso9@oswego.edu</a>
+          </h3>
+      <ul class= "navigation">
+        <a href="AboutMe.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">About Me</li>
+        </a>
+        <a href="Bowling.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Bowling</li>
+        </a>
+        <a href="UXProjects.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">UX Projects</li>
+        </a>
+        <a href="Publications.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Publications</li>
+        </a>
+        <a href="Contact.html">
+            <li style="display:inline-block;font-size:20px;font-weight:bolder;">Contact</li>
+        </a>
+        <a href="Ireland2018.html">
+          <li style="display:inline-block;font-size:20px;font-weight:bolder;">Ireland 2018</li>
+            </a>
+        </ul>
+      </div>
+    </header>
+
+    <h2 style="text-align:center;text-decoration:underline;">Theo's Bowling Page</h2>
+    <h3 style="left:5%;position:absolute;">Current staff affiliations: Columbia 300 Regional Staff, Turbo Grips Regional Staff</h3>
+    <p style="position:absolute;left:5%;top:37%;width:900px;">I have been bowling for over 15 years and it is one of my favorite hobbies. I am also a part of the Ebonite International
+       bowling company and represent them and their products. On the weekends, I also travel for bowling ball demos and for bowling
+       tournaments to compete. I have 29 300 games and 9 800 series sanctioned.</p>
+    <div class="grid-row reverse video-gallery" style="overflow:auto;width:900px;height:900px; position:absolute;left:5%;top:45%;">
+     <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Columbia 300 Savage Life</label>
+     <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Columbia 300 Savage</label>
+     <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Columbia 300 Chaos</label>
+     <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">Columbia 300 Spoiler Alert</label>
+     <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Columbia 300 Momentum Gold</label>
+     <input type="radio" value="6" name="video-list" id="video-6" /><label for="video-6">Columbia 300 Lit Pearl</label>
+     <input type="radio" value="9" name="video-list" id="video-7" /><label for="video-7">Hammer Statement Solid and Pearl</label>
+     <input type="radio" value="10" name="video-list" id="video-8" /><label for="video-8">Hammer Web ft. Moe Davidson</label>
+     <input type="radio" value="11" name="video-list" id="video-9" /><label for="video-9">Hammer Web Tour ft. Moe Davidson</label>
+     <input type="radio" value="12" name="video-list" id="video-10" /><label for="video-10">Hammer Purple Urethane</label>
+     <input type="radio" value="13" name="video-list" id="video-11" /><label for="video-11">Hammer Rebel Yell</label>
+     <input type="radio" value="14" name="video-list" id="video-12" /><label for="video-12">Hammer Gauntlet Fury</label>
+     <input type="radio" value="15" name="video-list" id="video-13" /><label for="video-13">Hammer Black Widow Gold</label>
+     <input type="radio" value="16" name="video-list" id="video-14" /><label for="video-14">Track Tactix</label>
+     <input type="radio" value="17" name="video-list" id="video-15" /><label for="video-15">Track Alias</label>
+     <input type="radio" value="18" name="video-list" id="video-16" /><label for="video-16">Track Mako Bite</label>
+     <input type="radio" value="19" name="video-list" id="video-17" /><label for="video-17">Ebonite Choice</label>
+     <input type="radio" value="20" name="video-list" id="video-18" /><label for="video-18">Ebonite Gamebreaker 2 and 3</label>
+     <!-- videos -->
+     <div class="video video-1">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xa_XMdA3t8c" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-2">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nB8h27bUeyM" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-3">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/v653MLBf5Sk" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-4">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/26exEMDuj1k" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-5">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ytd3fPnZZ3E" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-6">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/b1dbbU8dBs4" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-7">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/LY7ff81NO20" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-8">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lmvtQ_jxXfc" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/IHtM4orTQCQ" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-10">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/BC6X2rmDE_M" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-11">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/a3SbNulZ3C0" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-12">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RzreTWG7OiU" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-13">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/G_LQ5VOm6qQ" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-14">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gCpzCWPcDcE" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-15">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DS0gy9QnIic" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-16">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rnOApyFw0YU" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-17">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/AsWC3JivBYg" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <div class="video video-18">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/u9jufYtkDHk" frameborder="0" allowfullscreen></iframe>
+     </div>
+
+     <!-- videos -->
+    </div>
+
+    <img src="Ebonite-corp.png" alt="eboniteinternational" style="position:absolute;right:5%;width:400px;height:120px;top:25%;">
+
+    <img src="COL_300_Logo_Color.png" alt="columbia300logo" style="position:absolute;right:8.5%;width:300px;height:150x;top:50%;">
+
+    <img src="Turbo-Logo-RegTrade.png" alt="turbogripslogo" style="position:absolute;right:9%;width:300x;height:150px;top:75%;">
+
+
+  </body>
+</html>

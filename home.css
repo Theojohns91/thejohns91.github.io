@@ -1,0 +1,185 @@
+h1 {
+  font-family: 'Arimo';
+}
+
+h3 {
+  font-family: 'Arimo';
+}
+
+li {
+  font-family: 'Arimo';
+}
+
+div.table {
+  font-family: 'Arimo';
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.navigation {
+  position: absolute;
+  right: 0%;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 1px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-family: 'Arimo';
+}
+
+.headerlogo {
+  overflow: hidden;
+
+}
+
+.IEEEImage img {
+  border-radius: 25%;
+  width:500px;
+  height: 500px;
+  left: 55%;
+  margin-right: 10px;
+  top: 190px;
+  position: absolute;
+}
+
+
+
+h2 {
+  font-family: "Arimo";
+}
+
+.workexperience {
+  position: relative;
+}
+
+.work {
+  position: relative;
+  left: 200px;
+  bottom: 60%;
+}
+
+.ga {
+  left: 300px;
+  bottom: 60%;
+}
+
+.navigation {
+  position:absolute;
+  left:50%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+label {
+  font-family: 'Arimo';
+}
+
+textarea {
+  font-family: 'Arimo';
+}
+
+ .youtube {
+   left: 20%;
+   down: 80%;
+ }
+
+ * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.containercontact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+#wrap-centered {
+    width: 100%;
+    margin: 0 auto;
+}
