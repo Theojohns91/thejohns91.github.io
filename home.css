@@ -2,6 +2,11 @@ h1 {
   font-family: 'Arimo';
 }
 
+body {
+  max-width: 1920px;
+  min-width: 1000px;
+}
+
 h3 {
   font-family: 'Arimo';
 }
@@ -14,6 +19,10 @@ div.table {
   font-family: 'Arimo';
   text-align: justify;
   text-justify: inter-word;
+}
+
+.topmenu {
+  position: relative;
 }
 
 .navigation {
